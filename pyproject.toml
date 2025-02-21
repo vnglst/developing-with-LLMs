@@ -5,7 +5,11 @@ authors = [{ name = "Koen van Gilst", email = "koen@koenvangilst.nl" }]
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["mypy>=1.15.0", "ruff>=0.9.7"]
+dependencies = [
+    "mypy>=1.15.0",
+    "openpyxl>=3.1.5",
+ "ruff>=0.9.7",
+]
 
 [tool.setuptools]
 packages = ["src"]
@@ -20,6 +24,4 @@ indent-style = "space"
 docstring-code-format = true
 
 [dependency-groups]
-dev = [
-    "ipykernel>=6.29.5",
-]
+dev = ["ipykernel>=6.29.5"]
