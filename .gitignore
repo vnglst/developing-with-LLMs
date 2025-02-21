@@ -1,3 +1,5 @@
 dataverse_files.zip
 dataverse_files/
 un_speeches.db
+.venv/
+.mypy_cache/
