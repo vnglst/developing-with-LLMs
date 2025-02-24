@@ -1,0 +1,136 @@
+Welcome! Type your question below. Type 'exit' to quit.
+
+You: Can you show a list of all the princes that spoke at the UN, the year they spoke, the country they're from? Sort them on year.
+.
+[DEBUG] SQL Query:
+
+```sql
+-- Look for unique titles in the `post` column that might indicate a prince spoke.
+SELECT DISTINCT post FROM speeches;
+```
+
+[DEBUG] SQL Result:
+
+```python
+[(None,), ('Prime Minister, Minister for National Security and the Civil Service, and Minister for Finance, Economic Affairs and Investment',), ('Minister for External Affairs',), ('President',), ('King',), ('Chair of the Delegation',), ('President ad interim',), ('Chief Advisor of the Interim Government and Minister for Foreign Affairs',), ('Prime Minister',), ('Minister for Foreign Affairs',), ('Head of State',), ('Vice-President',), ('Constitutional President',), ('Deputy Prime Minister and Minister for Foreign Affairs and Expatriates',), ('Minister for Foreign Affairs and International Cooperation',), ('Minister for Foreign Affairs and for Guineans Abroad',), ('Minister for Development Cooperation',), ('Second Minister for Foreign Affairs and Trade',), ('Minister for Foreign Affairs and Cooperation of Congolese Living Abroad',), ('Federal Minister for Europe, Integration, and Foreign Affairs',), ('Prime Minister and Minister for Finance and Corporate Governance',), ('Secretary for Foreign Affairs',), ('State Councillor and Minister for Foreign Affairs',), ('Minister for Foreign Affairs and Cooperation',), ('First Vice-President and Minister for Foreign Affairs',), ('Chief Executive',), ('Prime Minister, Minister of State, Minister for Communication and Media, and Minister for Worship',), ('Prime Minister, Minister for Finance, the Public Service, National Security, Legal Affairs and Grenadines Affairs',), ('Minister for Foreign and Political Affairs and Justice',), ('Minister for Foreign Affairs, Justice and Culture',), ('Minister for Foreign Affairs and Trade',), ('Vice-President and Minister for Foreign Affairs',), ('Prime Minister and Minister for Foreign Affairs and Trade',), ('Minister Responsible for Foreign Affairs',), ('First Vice-President',), ('Minister for External Relations and International Cooperation',), ('Deputy Prime Minister and Minister for Foreign Affairs and Trade with responsibility for Brexit',), ('Prime Minister, Minister for Home Affairs, External Communications and National Development Unit, Minister for Finance and Economic Development',), ('Minister for Foreign Affairs, Cooperation, African Integration and Nigeriens Living Abroad',), ('President and Head of Government',), ('Acting Minister for Foreign Affairs and International Cooperation',), ('President of the European Council',), ('Deputy Prime Minister, Minister of the Interior and Acting Minister for Foreign Affairs',), ('President of the Government',), ('Head of Government',), ('Emir',), ('Minsiter for Foreign and CARICOM Affairs',), ('Deputy Minister for Foreign Affairs',), ('Secretary for Relations with States',), ('Minister for Foreign Affairs and Communities',), ('Minister for Foreign Affairs and Labour',), ('Prime Minister and Minister for Finance, Economic Growth, Job Creation, External Affairs and the Public Service',), ('Chairman of the Presidency',), ('Prime Minister and Minister of Defence, Economic Growth and Job Creation',), ('Minister for Foreign Affairs and Caribbean Community Affairs',), ('Minister for Foreign Affairs and Senegalese Living Abroad',), ('President of the Council of Ministers',), ('President, Head of Government and Minister for Foreign Affairs and Immigration',), ('Minister for Foreign Affairs, African Integration and International Cooperation',), ('Attourney General and Minister for Foreign Affairs and Foreign Trade',), ('Minister for Foreign Affairs, East Africa, Regional and International Cooperation',), ('Prime Minister and Minister for Itaukei Affairs, Sugar Industry and Foreign Affairs',), ('Prime Minister and Minister for Arts, Culture and Heritage and National Security and Intelligence',), ('Minister of State and Minister for Foreign Affairs, Cooperation and Regional Integration',), ('Union Minister for the Office of the State Counsellor',), ('Prime Minister and Minister for General Affairs',), ('President and Commander-in-Chief of the Defence Forces',), ('President of the Councils of State and of Ministers',), ('Prime Minister and Minister for Sustainable Development, National Security, People Empowerment and Constituency Empowerment',), ('Prime Minister, Minister for Foreign Affairs, Minister for the Economy, Minister for Communications, and Minister for Regional Cooperation',), ('Prime Minister and Minister for Public Utilities',), ('Federal Minister for Foreign Affairs',), ("First Secretary of the Central Committee of the Polish United Workers' Party",), ('UN Representative',), ('Deputy Prime Minister',), ('Prince',), ('Chairman of the Council of Ministers of the Union of Soviet Socialist Republics',), ("Chairman of the Council of Ministers of the People's Republic of Albania",), ('Prime minister',), ('Delegation',), ('Chief Executive Officer',), ('MInister for Foreign Affairs',), ('Chair of Delegation',), ('Acting Head of State ',), ('Head of state',), ('vice-President',), ('president',), ('Deputy Minister Foreign Affairs',), ('Amir',), ('Secretary of Relations with States',), ('prime minister',), ('Head of the Church ',), ('President ',), ('Prime Minister and Minister for External Affairs ',), ('Vice-President ',), ('President of the Council of State and of the Government ',), ('Member of the Junta of the Government of National Reconstruction',), ('Ministry of Foreign Affairs ',), ('Prime Minister and Minister for General and Foreign Affairs ',), ('First Vice-President and Prime Minister ',), ('Coordinator of the Junta of the Government of National Reconstruction',), ('Prime Minister  ',), ('President and Comander of the Armed Forces and Minister of Defence ',), ('Commander in Chief, Head of State',), ('Prime Minister and Minister of Finance ',), ('Prime Minister, Minister of Defence and Internatl Security, Minister of Information, Minister of Reform Institutions and Minister of External Commnication ',), ('Head of Government ',), ('Prime Minister ',), ('President of the Council of the State ',), ('First Vice-President ',), ('First Executive President',), ('Foreign minister',), ('President  ',), ('interim president',), ('President of the Presidensy',), ('Minister for Foreign Affairs, Minister for Education and Minister for Cultural Affairs',), ('Minister for Foreign and Political Affairs',), ('Deputy Chairman of the Cabinet of Ministers and Minister for Foreign Affairs',), ('Minister for Foreign and CARICOM Affairs',), ('President of the Presidency Council of the Government of National Accord',), ('Head of the delegation',), ('Prime Minister, Minister of Defence and Home Affairs, Minister of Rodrigues and National Development Unit',), ('Deputy Prime Minister and Minister for Foreign Affairs',), ('Chair of the delegation',), ('Minister for Foreign Affairs and Immigration',), ('Minister for Foreign Affairs and Foreign Trade',), ('President of Faso and President of the Council of Ministers of Burkina Faso',), ('Minister for Foreign Affairs and Human Mobility',), ('Premier of the State Council',), ('Deputy Prime Minister and Minister for Foreign Affairs and International Cooperation',), ('Federal Minister for Europe, Integration and Foreign Affairs',), ('Minister for Foreign Affairs, Cooperation and Congolese Nationals Abroad',), ('Deputy Prime Minister and Minister for Home Affairs',), ('State Counsellor and Minister for Foreign Affairs',), ('Minister for Foreign Affairs, Communities and Defence',), ('Special Envoy of the Prime Minister and Minister for Public Service',), ('Crown Prince',), ('Vice-President and Minister for Women’s Affairs',), ('Senior Minister, Minister for Foreign Affairs and International Cooperation',), ('Acting President',), ('Minister for Foreign Affairs and CARICOM Affairs',), ('Minister for Foreign Affairs and Investment Promotion',), ('Minister for Foreign Affairs, Legal Affairs, Carriacou and Petite Martinique Affairs and Local Government',), ('Secretary of State',), ('Minister for Foreign Affairs, International Cooperation and Regional Integration',), ('Head of State and Commander-in-Chief of the Armed Forces',), ('PRIME MINISTER',), ('CROWN PRINCE',), ('Prime Minister and Minister for Foreign Affairs',), ('First Prime Minister',), ('CHAIRMAN OF THE SUPREME COUNCIL',), ('Not indicated',), ('Head of State ',), ('Vice President',), ('Minister of Foreign Affairs ',), ('Minister of State',), ('Vice Minister of Foreign Affairs',), ('Minister of Youth',), ('President of Government',), ('Minister for Foreign Affairs and International Development Coperation',), ('Minister for Foreign Affairs, International Economic Cooperation and Telecommunications',), ('Prime Minister, Minister of State, Minister for Communications and Media and Minister for Religious Affairs',), ('Prime Minister, Minister for Home Affairs, External Communications and National Development Unit, and Minister for Finance and Economic Development',), ('Prime Minister in charge of Beliris and Federal Cultural Institutions',), ('President and Head of State',), ('Prime Minister and Head of Government',), ('Prime Minister, First Lord of the Treasury and Minister for the Civil Service',), ('Permanent Representative',), ('Federal Minister for European and International Affairs',), ('Union Minister of the Office of the State Counsellor',), ('Prime Minister and Minister for Reform',), ('Prime Minister and Minister for Bougainville Affairs',), ('Prime Minister and Minister for iTaukei Affairs, Sugar Industry, and Foreign Affairs',), ('Minister for Foreign Affairs, Foreign Trade and Immigration',), ('Minister for Foreign Affairs, African Integration and Chadians Abroad',), ('Prime Minister and Minister for Public Enterprises',), ('King and President of the Council of Ministers',), ('Minister for Foreign Affairs and Senegalese Abroad',), ('Minister for Foreign Affairs, International Business and Diaspora Relations',), ('Prime Minister, Minister of Defence, Economic Growth and Job Creation',), ('Cairman of the Presidency',), ('President and Minister for Defense',), ('Minister of External Relations',), ('Pope',), ('Chairman of the Assembly Presidium',), ('Deputy Prime Minister ',), ('President of the National Council of Government',), ('King ',), ('Prime MInister',), ('President of the Government and Minister for Foreign Affairs and Commerce',), ('President    ',), ('Spanish ',), ('Senior Minister and Minister for Foreign Affairs and International Cooperation',), ('Cabinet Secretary for Foreign Affairs and International Trade',), ('Minister for Foreign Affairs and Aviation',), ('Minister of Foreign Affairs',), ('Vice-Chancellor and Federal Minister for Foreign Affairs',), ('Attorney General and Minister for Foreign Affairs and Foreign Trade',), ('Prime Minister and Minister for the Autonomous Region of Bougainville',), ('Prime Minister and Minister for Finance and Public Service',), ('Minister of Foreign Affairs and Cooperation',), ('Minister for Foreign Affairs and Trade with responsibility for Brexit',), ('Prime Minister and Minister for Home Affairs, External Communications and National Development Unit, Minister for Finance and Economic Development',), ('Minister for Foreign Affairs, Cooperation, African Integration and Nigeriens Abroad',), ('Minister of Foreign and European Affairs and Minister of Immigration and Asylum',), ('Deputy Prime Minister and Minister for Foreign Affairs, International Trade and Regional Integration',), ('Minister at the Prime Minister’s Office and Second Minister for Foreign Affairs and Trade',), ('Minister for Foreign Affairs and Immigration of the Commonwealth',), (' ',), ('First Vice-President of the Supreme Military Council and Commis·sioner for External Affairs of Equatorial Guinea',), ('President of the Republic of Mali and Chairman of the Conference of Heads of State of the Permanent Inter-State Committee on Drought Control in the Sahel',), (' Coordinator of the Junta of the Government',), ('Prime Minister   ',), ('Prime Minister and Minister for foreign affairs ',), ('Chancellor',), ('Head of the Federal Military Government ',), ("Vice-President of the Prime Minister's Council",), ('Coordinator of the Junta of the Govermnent of National Reconstruction ',), ('President Republic',), ('Prime Minister and Minister for General and ',), ('Prime Minister, Minister for Defence and Foreign Affairs',), ('King of the Hasemite Kingdom of Jordan',), ('Vice President of the Republic',), ('President of the Republic of Pananma',), ('President of the Eastern Republic of Uruguay',), ('President of the Republic of Venezuela',), ('President of the Federative Republic of Brazil',), ('Head  of the goverment',), ("President of  the people's Republic of Mozambique",), ('Deputy prime minister and minister of Foreign Affairs and specail envoy ',), ('President of the United Republic of Tanzania',), ('President of the Arab Republic of Egypt',), ('President of Democratic Kampuchea',), ('President of the Republic of Peru',), ('Vice President and Misnter of External Relations',), ('Chairman of the United National Front of Kampuchea French',), ('Personal Representative of the Head of State of the Republic of the Philippines',), ('Ministry of External Relations ',), ('Prime Minister, Minister of State, Minister of Communications and Media and Minister for Religious Affairs',), (' Deputy Chairman of the Cabinet of Ministers and Minister for Foreign Affairs',), ('Minister for Foreign Affairs and External Trade',), ('Minister for Foreign Affairs and Cooperation and of Congolese Living Abroad',), ('Minister for Foreign Affairs, International Cooperation and Communities',), ('rime Minister and Minister for Europe and Foreign Affairs',), ('Minister for Foreign Affairs and Minister for Intelligence',), ('Deputy Prime Minister, Minister for Foreign Affairs and International Cooperation',), ('Prime Minister and Minister for iTaukei Affairs and Sugar Industry',), ('Minister for Foreign Affairs and East African Cooperation',), ('Attorney General and Minister for Foreign Affairs',), ('Head of State and Head of Government',), ('Prime Minister and Minister of Reform',), ('Prime Minister and Minister for Arts, Culture and Heritage, and National Security and Intelligence',), ('President of the Republic of Malawi, Minister for Defense and Commander-in-Chief of the Malawi Defense Force and the Malawi Police Service',), ('Minister for Foreign Affairs, International Cooperation, Regional Integration, Francophonie and Gabonese Abroad',), ('Minister for Foreign Affairs and Worship',), ('Minister for International Affairs and Cooperation',), ('Minister for International Relations and Cooperation',), ('Minister for Foregn Affairs',), ('Permanent Representative ',), ('Chairman of the Transitional Military Council ',), ('Chairman of the Presidency ',), ('Chairman of the Presidential Council ',), ('Prince and Head of State ',), ('PREMIER OF THE ADMINISTRATIVE COUNCIL ',), ('President of the Supreme National Council',), ('Chairman of the military council',), ('President and comander in chief of the armed forces',), ('President   ',), ('Foreign Minister',), ('President of the Federal Republic of Cameroon',), ('Head of government',), ('Chairman of the Council of Ministers',), ('Chairman',), ('Chairman of the military council and coucil of ministers',), ('Sheikh ',), ('Member of the Presidency',)]
+```
+
+[DEBUG] SQL Query:
+
+```sql
+-- Look for unique names or titles in the `speaker` column that contain "Prince" or related terms.
+SELECT DISTINCT speaker FROM speeches WHERE speaker LIKE '%Prince%' OR speaker LIKE '%Highness%';
+```
+
+[DEBUG] SQL Result:
+
+```python
+[('His Highness Sheikh Tamim bin Hamad Al-Thani',), ('Prince SOUVANNA PHOUMA',), ('Prince Mohamed Bolkiah',), ('Prince SOUVANNA PHOU MA',), ('Prince Albert II ',), ('Prince Albert',), ('Prince Norodom SIHANOUK ',), ('Prince Moulay HASSAN',), ('Prince Moulay Rachid ',), ('Prince NORODOM SIHANOUK',), ('Prince Saud AL-FAISAL',), ('Prince Mohamad BOLKIAH ',), ('Prince Mohammed bin Naif bin Abdulaziz Al-Saud',), ('Prince Sdech Krom Luong Norodom Ranariddh',), ('Prince MOHAMED BOLKIAH',), ('Prince EL-HASSAN BIN TALAL',), ('Prince HANS-ADAM II of Liechtenstein',), ('Prince Albert II',), ('Prince Faisal bin Farhan Al-Sand',), ('His Highness Sheikh Abdullah Bin Zayed Al Nahyan',), ('His Serene Highness Prince Albert II of Monaco',), ('Princess Hajah Masna',), ('Prince Wan Waithayakin',), ('His Serene Highness Prince Albert II',), ('Prince Haji Al-Muhtadee Billah',), ('Prince Saud AL-FAISAL ',), ('Prince Mohamed BOLKIATI ',), ('Prince HASSAN IBM TALAL ',), ('His Highness Sheikh Abdullah Bin Zayed Al-Nahyan',), ('Prince Saud Al-Faisal ',), ('Prince Wan Waithayakon',), ('Prince Norodom Sihanouk',), ('Prince Ally Khan',), ('Prince ‘Ulukalala Lavaka Ata',), ('Crown Prince Al Hussein bin Abdullah II',), ('Crown Prince HASSAN',), ('Prince ALFAISAL',), ('Prince WAN WAITHAYAKON',), ('H.R.H. Prince Faisal',), ('Prince NORODOM SIHANOUK ',), ('Prince SOUVANNA PHOUMA ',), ('Prince Ulukalala Lavaka Ata',), ('Prince Saud Al-Faisal',), ('Prince Al-Saud',), ('Prince Norodom SIHANOUK',), ('Crown Prince Albert',), ('Prince Norodom Sirivudh',), ('Prince Dlamini',), ('Prince El Hassan Bin Talal',), ('Prince Henry',), ('Prince Haji Al-Muhtadee',), ('Prince Abdulaziz bin Abdullah',), ('Prince Moulay Rachid',), ('Prince AL-FAISAL',), ('Serene Highness Prince Alois von und zu Liechtenstein',), ('Serene Highness Prince Albert II',), ('Prince Hans-Adam II ',), ('Prince MOHAMED BOLKIAH ',), ('HIGHNESS SHEIKH JABER AL-AHMAD AL-JABER AL-SABAH',), ('PRINCE Mohamed BOLK IAH ',), ('Prince SAUD AŁ-FAISAŁ ',), ('Prince Mohamed BOLKIAH ',), ('His Highness Sheikh Tamim bin Hamad bin Khalifa AL-THANI ',), ('His Highness Sheikh Abdullah Bin Zayed AL NAHYAN',)]
+```
+
+[DEBUG] SQL Query:
+
+```sql
+-- Extract the relevant details (speaker, country, year) for those identified as princes.
+SELECT speaker, country_name, year FROM speeches WHERE speaker LIKE '%Prince%' OR speaker LIKE '%Highness%' ORDER BY year;
+```
+
+[DEBUG] SQL Result:
+
+```python
+[('Prince WAN WAITHAYAKON', 'Thailand', 1954), ('Prince Wan Waithayakin', 'Thailand', 1955), ('Prince Wan Waithayakon', 'Thailand', 1958), ('Prince Norodom Sihanouk', 'Cambodia', 1958), ('Prince Ally Khan', 'Pakistan', 1958), ('Prince Norodom SIHANOUK ', 'Cambodia', 1960), ('Prince Moulay HASSAN', 'Morocco', 1960), ('Prince Norodom Sihanouk', 'Cambodia', 1961), ('H.R.H. Prince Faisal', 'Saudi Arabia', 1962), ('Prince SOUVANNA PHOU MA', 'Laos', 1965), ('Prince SOUVANNA PHOUMA', 'Laos', 1966), ('Prince SOUVANNA PHOUMA ', 'Laos', 1967), ('Prince SOUVANNA PHOUMA', "Lao People's Democratic Republic", 1971), ('Prince Norodom SIHANOUK', 'Cambodia', 1975), ('Prince Saud AL-FAISAL', 'Saudi Arabia', 1975), ('Prince Saud Al-Faisal', 'Saudi Arabia', 1976), ('Prince Saud Al-Faisal ', 'Saudi Arabia', 1977), ('Crown Prince HASSAN', 'Jordan', 1981), ('Prince ALFAISAL', 'Saudi Arabia', 1981), ('Prince NORODOM SIHANOUK ', 'Democratic Kampuchea', 1982), ('Prince NORODOM SIHANOUK', 'Kampuchea', 1983), ('Prince Saud AL-FAISAL', 'Saudi Arabia', 1983), ('Prince Mohamed Bolkiah', 'Brunei Darussalam', 1985), ('Prince Al-Saud', 'Saudi Arabia', 1985), ('Prince AL-FAISAL', 'Saudi Arabia', 1986), ('Prince Saud AL-FAISAL ', 'Saudi Arabia', 1987), ('Prince Mohamed BOLKIATI ', 'Brunei', 1987), ('Prince HASSAN IBM TALAL ', 'Jordan', 1987), ('PRINCE Mohamed BOLK IAH ', 'Brunei', 1988), ('Prince SAUD AŁ-FAISAŁ ', 'Saudi Arabia', 1988), ('Prince Mohamad BOLKIAH ', 'Brunei Darussalam', 1989), ('Prince Hans-Adam II ', 'Liechtenstein', 1991), ('Prince MOHAMED BOLKIAH ', 'Brunei Darussalam', 1991), ('Prince Saud Al-Faisal ', 'Saudi Arabia', 1991), ('HIGHNESS SHEIKH JABER AL-AHMAD AL-JABER AL-SABAH', 'Kuwait', 1991), ('Prince Albert', 'Monaco', 1993), ('Prince Sdech Krom Luong Norodom Ranariddh', 'Cambodia', 1993), ('Prince MOHAMED BOLKIAH', 'Brunei Darussalam', 1993), ('Prince EL-HASSAN BIN TALAL', 'Jordan', 1993), ('Prince HANS-ADAM II of Liechtenstein', 'Liechtenstein', 1993), ('Crown Prince Albert', 'Monaco', 1994), ('Prince Saud Al-Faisal', 'Saudi Arabia', 1994), ('Prince Norodom Sirivudh', 'Cambodia', 1994), ('Prince Dlamini', 'Swaziland', 1994), ('Prince El Hassan Bin Talal', 'Jordan', 1994), ('Prince Mohamed Bolkiah', 'Brunei Darussalam', 1995), ('Prince Albert', 'Monaco', 1996), ('Prince Mohamed Bolkiah', 'Brunei', 1998), ('Prince Albert', 'Monaco', 1998), ('Prince Mohamed Bolkiah', 'Brunei', 1999), ('Prince Mohamed Bolkiah', 'Brunei', 2000), ('Prince ‘Ulukalala Lavaka Ata', 'Tonga', 2002), ('Prince Mohamed Bolkiah', 'Brunei', 2002), ('Prince Mohamed Bolkiah', 'Brunei-Darussalam', 2003), ('Prince Ulukalala Lavaka Ata', 'Tonga', 2003), ('Prince Saud Al-Faisal', 'Saudi Arabia', 2003), ('Princess Hajah Masna', 'Brunei Darussalam', 2004), ('Prince Saud AL-FAISAL', 'Saudi Arabia', 2004), ('Prince Albert', 'Monaco', 2004), ('Prince Mohamed BOLKIAH ', 'Brunei Darussalam', 2006), ('His Highness Sheikh Tamim bin Hamad bin Khalifa AL-THANI ', 'Qatar', 2006), ('Prince Saud AL-FAISAL ', 'Saudi Arabia', 2006), ('His Highness Sheikh Abdullah Bin Zayed AL NAHYAN', 'United Arab Emirates', 2006), ('Prince Albert II', 'Monaco', 2007), ('Prince Haji Al-Muhtadee Billah', 'Brunei Darussalam', 2008), ('Prince Mohamed Bolkiah', 'Brunei-Darussalam', 2009), ('Prince Albert II ', 'Monaco', 2009), ('His Highness Sheikh Abdullah Bin Zayed Al-Nahyan', 'UAE', 2010), ('Prince Mohamed Bolkiah', 'Brunei Darussalam', 2010), ('Prince Haji Al-Muhtadee Billah', 'Brunei Darussalam', 2011), ('Prince Henry', 'Luxembourg', 2012), ('Prince Haji Al-Muhtadee', 'Brunei Darussalam', 2012), ('Prince Abdulaziz bin Abdullah', 'Saudi Arabia', 2012), ('Prince Moulay Rachid', 'Morocco', 2012), ('His Serene Highness Prince Albert II', 'Monaco', 2013), ('Prince Haji Al-Muhtadee Billah', 'Brunei Darussalam', 2013), ('Prince Moulay Rachid ', 'Morocco', 2015), ('Prince Mohammed bin Naif bin Abdulaziz Al-Saud', 'Saudi Arabia', 2016), ('Prince Albert II', 'Monaco', 2017), ('Crown Prince Al Hussein bin Abdullah II', 'Jordan', 2017), ('His Highness Sheikh Tamim bin Hamad Al-Thani', 'Qatar', 2018), ('Serene Highness Prince Alois von und zu Liechtenstein', 'Principality of Liechtenstein', 2019), ('His Highness Sheikh Abdullah Bin Zayed Al Nahyan', 'United Arab Emirates', 2019), ('Serene Highness Prince Albert II', 'Monaco', 2019), ('His Highness Sheikh Abdullah Bin Zayed Al Nahyan', 'United Arab Emirates', 2020), ('His Highness Sheikh Tamim bin Hamad Al-Thani', 'State of Qatar', 2020), ('His Serene Highness Prince Albert II of Monaco', 'Monaco', 2020), ('Prince Faisal bin Farhan Al-Sand', 'Saudi Arabia ', 2023)]
+```
+
+.
+Assistant: Here is a list of all the princes who spoke at the UN, including the year they spoke and the country they represented, sorted by year:
+
+- Prince WAN WAITHAYAKON, Thailand, 1954
+- Prince Wan Waithayakin, Thailand, 1955
+- Prince Wan Waithayakon, Thailand, 1958
+- Prince Norodom Sihanouk, Cambodia, 1958
+- Prince Ally Khan, Pakistan, 1958
+- Prince Norodom SIHANOUK, Cambodia, 1960
+- Prince Moulay HASSAN, Morocco, 1960
+- Prince Norodom Sihanouk, Cambodia, 1961
+- H.R.H. Prince Faisal, Saudi Arabia, 1962
+- Prince SOUVANNA PHOUMMA, Laos, 1965
+- Prince SOUVANNA PHOUMA, Laos, 1966
+- Prince SOUVANNA PHOUMA, Laos, 1967
+- Prince SOUVANNA PHOUMA, Lao People's Democratic Republic, 1971
+- Prince Norodom SIHANOUK, Cambodia, 1975
+- Prince Saud AL-FAISAL, Saudi Arabia, 1975
+- Prince Saud Al-Faisal, Saudi Arabia, 1976
+- Prince Saud Al-Faisal, Saudi Arabia, 1977
+- Crown Prince HASSAN, Jordan, 1981
+- Prince ALFAISAL, Saudi Arabia, 1981
+- Prince NORODOM SIHANOUK, Democratic Kampuchea, 1982
+- Prince NORODOM SIHANOUK, Kampuchea, 1983
+- Prince Saud AL-FAISAL, Saudi Arabia, 1983
+- Prince Mohamed Bolkiah, Brunei Darussalam, 1985
+- Prince Al-Saud, Saudi Arabia, 1985
+- Prince AL-FAISAL, Saudi Arabia, 1986
+- Prince Saud AL-FAISAL, Saudi Arabia, 1987
+- Prince Mohamed BOLKIATI, Brunei, 1987
+- Prince HASSAN IBM TALAL, Jordan, 1987
+- PRINCE Mohamed BOLKIAH, Brunei, 1988
+- Prince SAUD AŁ-FAISAŁ, Saudi Arabia, 1988
+- Prince Mohamad BOLKIAH, Brunei Darussalam, 1989
+- Prince Hans-Adam II, Liechtenstein, 1991
+- Prince MOHAMED BOLKIAH, Brunei Darussalam, 1991
+- Prince Saud Al-Faisal, Saudi Arabia, 1991
+- HIGHNESS SHEIKH JABER AL-AHMAD AL-JABER AL-SABAH, Kuwait, 1991
+- Prince Albert, Monaco, 1993
+- Prince Sdech Krom Luong Norodom Ranariddh, Cambodia, 1993
+- Prince MOHAMED BOLKIAH, Brunei Darussalam, 1993
+- Prince EL-HASSAN BIN TALAL, Jordan, 1993
+- Prince HANS-ADAM II of Liechtenstein, Liechtenstein, 1993
+- Crown Prince Albert, Monaco, 1994
+- Prince Saud Al-Faisal, Saudi Arabia, 1994
+- Prince Norodom Sirivudh, Cambodia, 1994
+- Prince Dlamini, Swaziland, 1994
+- Prince El Hassan Bin Talal, Jordan, 1994
+- Prince Mohamed Bolkiah, Brunei Darussalam, 1995
+- Prince Albert, Monaco, 1996
+- Prince Mohamed Bolkiah, Brunei, 1998
+- Prince Albert, Monaco, 1998
+- Prince Mohamed Bolkiah, Brunei, 1999
+- Prince Mohamed Bolkiah, Brunei, 2000
+- Prince ‘Ulukalala Lavaka Ata, Tonga, 2002
+- Prince Mohamed Bolkiah, Brunei, 2002
+- Prince Mohamed Bolkiah, Brunei-Darussalam, 2003
+- Prince Ulukalala Lavaka Ata, Tonga, 2003
+- Prince Saud Al-Faisal, Saudi Arabia, 2003
+- Princess Hajah Masna, Brunei Darussalam, 2004
+- Prince Saud AL-FAISAL, Saudi Arabia, 2004
+- Prince Albert, Monaco, 2004
+- Prince Mohamed BOLKIAH, Brunei Darussalam, 2006
+- His Highness Sheikh Tamim bin Hamad bin Khalifa AL-THANI, Qatar, 2006
+- Prince Saud AL-FAISAL, Saudi Arabia, 2006
+- His Highness Sheikh Abdullah Bin Zayed AL NAHYAN, United Arab Emirates, 2006
+- Prince Albert II, Monaco, 2007
+- Prince Haji Al-Muhtadee Billah, Brunei Darussalam, 2008
+- Prince Mohamed Bolkiah, Brunei-Darussalam, 2009
+- Prince Albert II, Monaco, 2009
+- His Highness Sheikh Abdullah Bin Zayed Al-Nahyan, UAE, 2010
+- Prince Mohamed Bolkiah, Brunei Darussalam, 2010
+- Prince Haji Al-Muhtadee Billah, Brunei Darussalam, 2011
+- Prince Henry, Luxembourg, 2012
+- Prince Haji Al-Muhtadee, Brunei Darussalam, 2012
+- Prince Abdulaziz bin Abdullah, Saudi Arabia, 2012
+- Prince Moulay Rachid, Morocco, 2012
+- His Serene Highness Prince Albert II, Monaco, 2013
+- Prince Haji Al-Muhtadee Billah, Brunei Darussalam, 2013
+- Prince Moulay Rachid, Morocco, 2015
+- Prince Mohammed bin Naif bin Abdulaziz Al-Saud, Saudi Arabia, 2016
+- Prince Albert II, Monaco, 2017
+- Crown Prince Al Hussein bin Abdullah II, Jordan, 2017
+- His Highness Sheikh Tamim bin Hamad Al-Thani, Qatar, 2018
+- Serene Highness Prince Alois von und zu Liechtenstein, Principality of Liechtenstein, 2019
+- His Highness Sheikh Abdullah Bin Zayed Al Nahyan, United Arab Emirates, 2019
+- Serene Highness Prince Albert II, Monaco, 2019
+- His Highness Sheikh Abdullah Bin Zayed Al Nahyan, United Arab Emirates, 2020
+- His Highness Sheikh Tamim bin Hamad Al-Thani, State of Qatar, 2020
+- His Serene Highness Prince Albert II of Monaco, Monaco, 2020
+- Prince Faisal bin Farhan Al-Sand, Saudi Arabia, 2023
+
+You:
