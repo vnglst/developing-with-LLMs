@@ -1,4 +1,6 @@
-# United Nations Speeches
+# Developing with Large Language Models
+
+Using United Nations Speeches data as an example.
 
 ## Exercises
 

@@ -1,5 +1,5 @@
 [project]
-name = "un-speeches-v2"
+name = "developing-with-large-language-models"
 description = "Analysis on United Nations speeches"
 authors = [{ name = "Koen van Gilst", email = "koen@koenvangilst.nl" }]
 version = "0.1.0"
@@ -12,6 +12,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "python-dotenv>=1.0.1",
     "ruff>=0.9.7",
+    "sqlite-vss>=0.1.2",
 ]
 
 [tool.setuptools]

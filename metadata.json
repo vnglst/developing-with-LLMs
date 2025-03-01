@@ -1,0 +1,12 @@
+{
+  "databases": {
+    "un_speeches": {
+      "queries": {},
+      "plugins": {
+        "datasette-sqlite-vss": {
+          "load_extension": [".venv/lib/python3.13/site-packages/sqlite_vss/vss0"]
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ load_dotenv()
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 conn = sqlite3.connect("un_speeches.db")
 
 
