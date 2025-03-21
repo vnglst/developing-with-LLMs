@@ -15,9 +15,6 @@ dependencies = [
     "sqlite-vss>=0.1.2",
 ]
 
-[tool.setuptools]
-packages = ["src"]
-
 [tool.ruff.lint]
 select = ["E", "F"]
 ignore = ["E501"]
