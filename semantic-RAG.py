@@ -28,7 +28,7 @@ c.execute("CREATE VIRTUAL TABLE IF NOT EXISTS speeches_vss USING vss0(vector(153
 conn.commit()
 
 # Retrieve rows from the main table (including the implicit rowid).
-c.execute("SELECT rowid, country, session, year, text FROM speeches LIMIT 10")
+c.execute("SELECT rowid, country, session, year, text FROM speeches LIMIT 3000")
 rows = c.fetchall()
 
 for row in rows:

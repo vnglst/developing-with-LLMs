@@ -104,7 +104,7 @@ def generate_embedding(text):
         return None
 
 
-def search_similar_speeches(conn, query_embedding, limit=5):
+def search_similar_speeches(conn, query_embedding, limit=2):
     """Search for speeches similar to the query embedding."""
     try:
         # Convert embedding to JSON string for SQLite
@@ -215,7 +215,6 @@ def chat_loop():
         print("Failed to set up database connection. Exiting.")
         return
 
-    # Chat history (simple implementation without using langchain's ConversationBufferMemory)
     chat_history = []
 
     while True:
@@ -242,11 +241,23 @@ def chat_loop():
                 print("No relevant speeches found.")
                 continue
 
-            # Extract text from similar speeches to use as context
-            context_texts = [speech[5] for speech in similar_speeches]
+            context = "<speeches>\n"
+            for speech in similar_speeches:
+                _rowid, country, session, year, speaker, text = speech[0:6]
+                context += "<speech>\n"
+                context += f"<country>{country}</country>\n"
+                context += f"<session>{session}</session>\n"
+                context += f"<year>{year}</year>\n"
+                context += f"<speaker>{speaker}</speaker>\n"
+                context += f"<text>{text}</text>\n"
+                context += "</speech>\n"
+            context += "</speeches>"
+
+            print("\nContext:")
+            print(context)
 
             # Generate answer based on query and context
-            answer = generate_answer(user_input, context_texts)
+            answer = generate_answer(user_input, context)
 
             # Display the answer and sources
             print("\nAnswer:")
